@@ -4,6 +4,7 @@ import os
 from dotenv import load_dotenv
 
 app = Flask(__name__)
+load_dotenv()
 
 API_KEY = os.getenv("API_KEY")
 

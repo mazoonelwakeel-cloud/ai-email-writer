@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Email Writer</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>AI Email Writer</h1>
+        <p>Create professional emails instantly using AI.</p>
+
+        <div class="form">
+
+            <label>Purpose</label>
+            <input type="text" id="purpose" placeholder="Enter email purpose">
+
+            <label>Recipient</label>
+            <input type="text" id="recipient" placeholder="Who is this email for?">
+
+            <label>Sender</label>
+            <input type="text" id="sender" placeholder="Your name">
+
+            <label>Language</label>
+            <select id="language">
+                <option>English</option>
+                <option>Arabic</option>
+                <option>French</option>
+                <option>German</option>
+                <option>Spanish</option>
+                <option>Italian</option>
+                <option>Portuguese</option>
+                <option>Russian</option>
+                <option>Chinese</option>
+                <option>Japanese</option>
+            </select>
+
+            <label>Tone</label>
+            <select id="tone">
+                <option>Formal</option>
+                <option>Friendly</option>
+                <option>Polite</option>
+            </select>
+
+            <label>Length</label>
+            <select id="length">
+                <option>Short</option>
+                <option>Medium</option>
+                <option>Detailed</option>
+            </select>
+
+            <button onclick="generateEmail()">
+                Generate Email
+            </button>
+
+        </div>
+
+        <div class="result">
+            <h2>Generated Email</h2>
+            <textarea id="output" readonly></textarea>
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
